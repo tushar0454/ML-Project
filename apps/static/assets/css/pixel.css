@@ -15,7 +15,7 @@
 
 */
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap");
-.datepicker {
+/* .datepicker {
   display: none; }
   .datepicker.active {
     display: block; }
@@ -230,7 +230,7 @@
 .datepicker-input.in-edit {
   border-color: #1c243b; }
   .datepicker-input.in-edit:focus, .datepicker-input.in-edit:active {
-    box-shadow: 0 0 0.25em 0.25em rgba(28, 36, 59, 0.2); }
+    box-shadow: 0 0 0.25em 0.25em rgba(28, 36, 59, 0.2); } */
 
 :root {
   --bs-blue: #0d6efd;
