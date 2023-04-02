@@ -1,0 +1,365 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} About {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        {% include 'includes/preloader.html' %}
+
+        <!-- Hero -->
+        <section class="section-header">
+            <div class="parallax1">
+                <section class="section-header bg-secondary text-white">
+                <div id="warning" style="padding: 30px;">
+                    <centre> This quiz is specially designed for students to test if they are dyslexic or not. Students are
+                        advised to attempt all the questions patiently under the surveillance of an elder.<br>
+                        ALL THE BEST JUNIOR!</centre>
+                </div>
+            </section>
+            </div>
+            <div class="main" style="margin: 50px; padding: 50px;">
+                <form name="quiz" method="post" action="/test">
+                    <div class="question">
+                        <!-- <span id="question">
+                            Question 1
+                        </span>
+                        <div class="content">
+                            Check whether these two alphabets are same or not?<br>
+                            <img src="/static/assets/img/quiz/o.png" width=100 height=100><img src="/static/assets/img/quiz/0.jpeg" width=100 height=100><br>
+                            <input type="radio" id="Yes" name="q1" value="4" >
+                            <label for="Yes">Yes</label><br>
+                            <input type="radio" id="No" name="q1" value="0" >
+                            <label for="No">No</label><br>
+                        </div>
+                        <br> -->
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">1.Check whether these two alphabets are same or not?<br>
+                                <img src="/static/assets/img/quiz/o.png" width=100 height=100><img src="/static/assets/img/quiz/0.jpeg" width=100 height=100><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                            <input type="radio" id="Yes" name="q1" value="4" class='form-check-input'>
+                            <label for="Yes" class="form-check-label">Yes</label><br>
+                            <input type="radio" id="No" name="q1" value="0" class='form-check-input'>
+                            <label for="No" class="form-check-label">No</label><br>
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                        </div>
+        
+                        <!-- <span id="question">
+                            Question 2
+                        </span><br>
+                        <div class="content">
+                            Guess the fruit in the picture below.<br>
+                            <img src="/static/assets/img/quiz/grapes.jpeg" width=350 height=250><br>
+                            <input type="radio" id="Grapes" name="q2" value="4" >
+                            <label for="Grapes">Grapes</label><br>
+                            <input type="radio" id="Orange" name="q2" value="0" >
+                            <label for="Orange">Orange</label><br>
+                            <input type="radio" id="Banana" name="q2" value="0" >
+                            <label for="Banana">Banana</label><br>
+                            <input type="radio" id="Mango" name="q2" value="0" >
+                            <label for="Mango">Mango</label><br>
+                        </div>
+                        <br> -->
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">2.Guess the fruit in the picture below.<br>
+                                <img src="/static/assets/img/quiz/grapes.jpeg" width=350 height=250><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                                <input type="radio" id="Grapes" name="q2" value="4" class='form-check-input'>
+                            <label for="Grapes" class="form-check-label">Grapes</label><br>
+                            <input type="radio" id="Orange" name="q2" value="0" class='form-check-input'>
+                            <label for="Orange" class="form-check-label">Orange</label><br>
+                            <input type="radio" id="Banana" name="q2" value="0" class='form-check-input'>
+                            <label for="Banana" class="form-check-label">Banana</label><br>
+                            <input type="radio" id="Mango" name="q2" value="0" class='form-check-input'>
+                            <label for="Mango" class="form-check-label">Mango</label><br>
+                                
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                        </div>
+        
+                        <!-- <span id="question">
+                            Question 3
+                        </span><br>
+                        <div class="content">
+                            Check whether these two alphabets are same or not?<br>
+                            <img src="/static/assets/img/quiz/g.jpg" width=100 height=100><img src="/static/assets/img/quiz/s.jpeg" width=100 height=100><br>
+                            <input type="radio" id="Yes" name="q3" value="0" >
+                            <label for="Yes">Yes</label><br>
+                            <input type="radio" id="No" name="q3" value="4" >
+                            <label for="No">No</label><br>
+                        </div>
+                        <br> -->
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">3.Check whether these two alphabets are same or not?<br>
+                                <img src="/static/assets/img/quiz/g.jpg" width=100 height=100><img src="/static/assets/img/quiz/s.jpeg" width=100 height=100><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                                <input type="radio" id="Yes" name="q3" value="0" class='form-check-input'>
+                                <label for="Yes" class="form-check-label">Yes</label><br>
+                                <input type="radio" id="No" name="q3" value="4" class='form-check-input'>
+                                <label for="No"class="form-check-label">No</label><br>
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                        </div>
+        
+                        <!-- <span id="question">
+                            Question 4
+                        </span><br>
+                        <div class="content">
+                            Which letter is G?<br>
+                            <img src="/static/assets/img/quiz/g.jpg" width=100 height=100><img src="/static/assets/img/quiz/o.png" width=100 height=100><br>
+                            <input type="radio" id="First" name="q4" value="4" >
+                            <label for="First">First</label><br>
+                            <input type="radio" id="Second" name="q4" value="0" >
+                            <label for="Second">Second</label><br>
+                        </div>
+                        <br> -->
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">4.Which letter is G?<br>
+                            <img src="/static/assets/img/quiz/g.jpg" width=100 height=100><img src="/static/assets/img/quiz/o.png" width=100 height=100><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                            <input type="radio" id="First" name="q4" value="4" class='form-check-input'>
+                            <label for="First" class="form-check-label">First</label><br>
+                            <input type="radio" id="Second" name="q4" value="0" class='form-check-input'>
+                            <label for="Second" class="form-check-label">Second</label><br>
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                        </div>
+        
+                        <!-- <span id="question">
+                            Question 5
+                        </span><br>
+                        <div class="content">
+                            Which letter CAT starts with?<br>
+                            <img src="/static/assets/img/quiz/cat.jpeg" width=400 height=300><br>
+                            <input type="radio" id="K" name="q5" value="0" >
+                            <label for="K">K</label><br>
+                            <input type="radio" id="S" name="q5" value="0" >
+                            <label for="S">S</label><br>
+                            <input type="radio" id="C" name="q5" value="4" >
+                            <label for="C">C</label><br>
+                        </div>
+                        <br> -->
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">5.Which letter CAT starts with?<br>
+                            <img src="/static/assets/img/quiz/cat.jpeg" width=400 height=300><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                                <input type="radio" id="K" name="q5" value="0" class='form-check-input'>
+                                <label for="K" class="form-check-label">K</label><br>
+                                <input type="radio" id="S" name="q5" value="0" class='form-check-input'>
+                                <label for="S" class="form-check-label">S</label><br>
+                                <input type="radio" id="C" name="q5" value="4" class='form-check-input'>
+                                <label for="C" class="form-check-label">C</label><br>
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                        </div>
+        
+                        <!-- <span id="question">
+                            Question 6
+                        </span><br>
+                        <div class="content">
+                            What is the smaller version of this letter?<br>
+                            <img src="/static/assets/img/quiz/b.png" width=100 height=100><br>
+                            <input type="radio" id="d" name="q6" value="0" >
+                            <label for="d">d</label><br>
+                            <input type="radio" id="b" name="q6" value="4" >
+                            <label for="b">b</label><br>
+                        </div>
+                        <br> --><br>
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">6.What is the smaller version of this letter?<br>
+                            <img src="/static/assets/img/quiz/b.png" width=100 height=100><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                                <input type="radio" id="d" name="q6" value="0" class='form-check-input'>
+                                <label for="d" class="form-check-label">d</label><br>
+                                <input type="radio" id="b" name="q6" value="4" class='form-check-input'>
+                                <label for="b" class="form-check-label">b</label><br>
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                            </div>
+
+        
+                        <!-- <span id="question">
+                            Question 7
+                        </span><br>
+                        <div class="content">
+                            What do you hear?<br>
+                            <audio controls>
+                                <source src="/static/assets/img/quiz/s.mp3" type="audio/mp3">
+                            </audio><br>
+                            <input type="radio" id="F" name="q7" value="0" >
+                            <label for="F">F</label><br>
+                            <input type="radio" id="S" name="q7" value="4" >
+                            <label for="S">S</label><br>
+                        </div>
+                        <br> -->
+                        <br>
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">7.What do you hear?<br>
+                                <audio controls>
+                                    <source src="/static/assets/img/quiz/s.mp3" type="audio/mp3">
+                                </audio><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                                <input type="radio" id="F" name="q7" value="0" class='form-check-input'>
+                                <label for="F" class="form-check-label">F</label><br>
+                                <input type="radio" id="S" name="q7" value="4" class='form-check-input'>
+                                <label for="S" class="form-check-label">S</label><br>
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                            </div>
+        
+                        <!-- <span id="question">
+                            Question 8
+                        </span><br>
+                        <div class="content">
+                            What do you see in the picture?<br>
+                            <img src="/static/assets/img/quiz/god.jpeg" width=300 height=200><br>
+                            <input type="radio" id="DOG" name="q8" value="0" >
+                            <label for="DOG">DOG</label><br>
+                            <input type="radio" id="GOD" name="q8" value="4" >
+                            <label for="GOD">GOD</label><br>
+                        </div>
+                        <br> -->
+                        <br>
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">8.What do you see in the picture?<br>
+                                <img src="/static/assets/img/quiz/god.jpeg" width=300 height=200><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                            <input type="radio" id="DOG" name="q8" value="0" class='form-check-input'>
+                            <label for="DOG" class="form-check-label">DOG</label><br>
+                            <input type="radio" id="GOD" name="q8" value="4" class='form-check-input'>
+                            <label for="GOD" class="form-check-label">GOD</label><br>
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                            </div>
+        
+                        <!-- <span id="question">
+                            Question 9
+                        </span><br>
+                        <div class="content">
+                            Which hand is left and Which hand is right?<br>
+                            <img src="/static/assets/img/quiz/right.jpeg" width=300 height=200><img src="/static/assets/img/quiz/left.jpeg" width=300 height=200><br>
+                            <input type="radio" id="First one is right and next one is left" name="q9" value="4" >
+                            <label for="First one is right and next one is left">First one is right and next one is
+                                left</label><br>
+                            <input type="radio" id="First one is left and next one is right" name="q9" value="0" >
+                            <label for="First one is left and next one is right">First one is left and next one is
+                                right</label><br>
+                        </div>
+                        <br> -->
+                        <br>
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">9.Which hand is left and Which hand is right?<br>
+                                <img src="/static/assets/img/quiz/right.jpeg" width=300 height=200><img src="/static/assets/img/quiz/left.jpeg" width=300 height=200><br>                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                                
+                            <input type="radio" id="First one is right and next one is left" name="q9" value="4" class='form-check-input'>
+                            <label for="First one is right and next one is left" class="form-check-label">First one is right and next one is
+                                left</label><br>
+                                <input type="radio" id="First one is left and next one is right" name="q9" value="0" class='form-check-input'>
+                                <label for="First one is left and next one is right" class="form-check-label">First one is left and next one is
+                                    right</label><br>
+                            
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                            </div>
+
+                        <!-- <fieldset class="form-group">
+                            <h4><span id="qid">1.What do you hear?</span></h4>
+                            <div class="option-block-container" id="question-options" >
+                                <input type="radio" id="CAKE" name="q10" value="0" class='form-check-input'>
+                            <label for="CAKE" class="form-check-label">CAKE</label><br>
+                            <input type="radio" id="LAKE" name="q10" value="4" class='form-check-input'>
+                            <label for="LAKE" class="form-check-label">LAKE</label><br>
+                            <input type="radio" id="TAKE" name="q10" value="0" class='form-check-input'>
+                            <label for="TAKE" class="form-check-label">TAKE</label><br>
+                            <input type="radio" id="FAKE" name="q10" value="0" class='form-check-input'>
+                            <label for="FAKE" class="form-check-label">FAKE</label><br>
+                            </div> End of option block -->
+                            <!-- </fieldset> -->
+        
+                        <!-- <span id="question">
+                            Question 10
+                        </span><br>
+                        <div class="content">
+                            What do you hear?<br>
+                            <audio controls>
+                                <source src="/static/assets/img/quiz/lake.mp3" type="audio/mp3">
+                            </audio><br>
+                            <input type="radio" id="CAKE" name="q10" value="0" >
+                            <label for="CAKE">CAKE</label><br>
+                            <input type="radio" id="LAKE" name="q10" value="4" >
+                            <label for="LAKE">LAKE</label><br>
+                            <input type="radio" id="TAKE" name="q10" value="0" >
+                            <label for="TAKE">TAKE</label><br>
+                            <input type="radio" id="FAKE" name="q10" value="0" >
+                            <label for="FAKE">FAKE</label><br>
+                        </div> -->
+                        <br>
+                        <div id="result" class="quiz-body">
+                            <form name="quizForm" onSubmit="">
+                            <fieldset class="form-group">
+                            <h4><span id="qid">10.What do you hear?<br>
+                                <audio controls>
+                                    <source src="/static/assets/img/quiz/lake.mp3" type="audio/mp3">
+                                </audio><br>
+                            </span></h4>
+                            <div class="option-block-container" id="question-options" >
+                                <input type="radio" id="CAKE" name="q10" value="0" class='form-check-input'>
+                            <label for="CAKE" class="form-check-label">CAKE</label><br>
+                            <input type="radio" id="LAKE" name="q10" value="4" class='form-check-input'>
+                            <label for="LAKE" class="form-check-label">LAKE</label><br>
+                            <input type="radio" id="TAKE" name="q10" value="0" class='form-check-input'>
+                            <label for="TAKE" class="form-check-label">TAKE</label><br>
+                            <input type="radio" id="FAKE" name="q10" value="0" class='form-check-input'>
+                            <label for="FAKE" class="form-check-label">FAKE</label><br>
+                            </div> <!-- End of option block -->
+                            </fieldset>
+                            </div>
+
+                    <span id="button"><a href="/test"><centre>SUBMIT</centre></span></a></span>
+                    <input type=submit value=Predict>
+                    </div>
+                </form>
+            </div>
+         
+        </section>
+    </main>
+
+
+    <!-- {% include 'includes/footer-about.html' %} -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

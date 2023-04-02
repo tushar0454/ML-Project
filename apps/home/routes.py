@@ -73,27 +73,38 @@ app = Flask(__name__)
 
 @blueprint.route("/test", methods=["GET", "POST"])
 def upload_predict():
-    print('Hello')
+    # print('Hello')
     if request.method == "POST":
-        # print(request.form.values())
+        print(request.form.values())
         feature_values = [float(x) for x in request.form.values()]
         print(feature_values)
         Language_score = feature_values[0] + feature_values[1] + feature_values[2] + feature_values[3] + feature_values[4] + feature_values[5] + feature_values[7]
         Language_score = Language_score / 28
 
+
+        print(Language_score)
+
         Memory_score = feature_values[1] + feature_values[8]
         Memory_score = Memory_score / 8
 
-        Speed = 10
+        print(Memory_score)
+
+        Speed = round(random.random(), 1)
+        
+        print(Speed)
 
         Visual_discrimination = feature_values[0] + feature_values[2] + feature_values[3] + feature_values[5]
         Visual_discrimination = Visual_discrimination / 16
 
+        print(Visual_discrimination)
+
         Audio_discrimination = feature_values[6] + feature_values[9]
         Audio_discrimination = Audio_discrimination / 8
 
+        print(Audio_discrimination)
+
         Survey_score = Language_score + Memory_score + Speed + Visual_discrimination + Audio_discrimination
-        Survey_score = Survey_score / 80
+        Survey_score = Survey_score / 8
 
         print(Survey_score)
 
@@ -112,7 +123,7 @@ def upload_predict():
         # elif label == 0:
         #     value = "Dyslexic (High)"
         return render_template("home/result.html", prediction=value)
-    return render_template("home/dyslexia_test.html")
+    return render_template("home/demo.html")
     
 if __name__ == "__main__":
     app.run(port=12001, debug=True)
