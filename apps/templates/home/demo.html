@@ -1,19 +1,49 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} About {% endblock %} 
+{% block title %}  {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
-
     <main>
-        
-        {% include 'includes/preloader.html' %}
-
-        <!-- Hero -->
+        <div class="hero_area">
+            {% include 'includes/navigation.html' %}
+        <section class="slider_section ">
+            <div class="container">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="detail-box">
+                          <h1>
+                            Test
+                            <span>
+                              
+                            </span>
+                          </h1>
+                          <p>
+                            This quiz is specially designed for students to test if they are dyslexic or not. Students are
+                        advised to attempt all the questions patiently under the surveillance of an elder.<br>
+                        ALL THE BEST JUNIOR!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 img-container">
+                        <div class="img-box">
+                          <img src="images/slider-img.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </div>
         <section class="section-header">
-            <div class="parallax1">
+            <!-- <div class="parallax1">
                 <section class="section-header bg-secondary text-white">
                 <div id="warning" style="padding: 30px;">
                     <centre> This quiz is specially designed for students to test if they are dyslexic or not. Students are
@@ -21,7 +51,7 @@
                         ALL THE BEST JUNIOR!</centre>
                 </div>
             </section>
-            </div>
+            </div> -->
             <div class="main" style="margin: 50px; padding: 50px;">
                 <form name="quiz" method="post" action="/test">
                     <div class="question">
@@ -355,11 +385,9 @@
          
         </section>
     </main>
-
-
-    <!-- {% include 'includes/footer-about.html' %} -->
-
-{% endblock content %}
+    {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}{% endblock javascripts %}
+
+</html>

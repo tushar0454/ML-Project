@@ -65,10 +65,78 @@ from flask import request
 from flask import render_template
 from tensorflow.keras.models import load_model
 import random
+import pickle
 
 app = Flask(__name__)
 
-#model = load_model("autism-model.h5")
+model = pickle.load(open('dyslexia.pkl','rb'))
+
+# model = load_model("dyslexia.py")
+
+    
+def rule(a):
+    if(a<0.3):
+        return 0
+    if(a>0.4 and a<0.6):
+        return 1
+    if(a>0.7):
+        return 2
+    return -1
+    
+def find_label(temp):
+    weights=[]
+    for i in range(5):
+        weights.append(random.random())
+    weights.sort(reverse=True)
+    weights[0]*=4
+    weights[1]*=3
+    weights[3]*=0.75
+    weights[4]*=0.5
+        
+    a=round((temp[0]*weights[0]+temp[1]*weights[1]+temp[2]*weights[2]+
+             (temp[3]+temp[4])*weights[3]+temp[5]*weights[4])/10,1)
+    b=rule(a)
+    if(b==-1):
+        if(a>=0.3 and a<=0.4):
+            if((temp[0]+temp[1])/2<0.3):
+                b=0
+            elif((temp[0]+temp[1])/2>0.4):
+                b=1
+            elif(temp[2]<0.3):
+                b=0
+            elif(temp[2]>0.4):
+                b=1
+            elif((temp[3]+temp[4])/2<0.3):
+                b=0
+            elif((temp[3]+temp[4])/2>0.4):
+                b=1
+            elif(temp[5]<0.3):
+                b=0
+            elif(temp[5]>0.4):
+                b=1
+            else:
+                b=0
+        else:
+            if((temp[0]+temp[1])/2<0.6):
+                b=1
+            elif((temp[0]+temp[1])/2>0.7):
+                b=2
+            elif(temp[2]<0.6):
+                b=1
+            elif(temp[2]>0.7):
+                b=2
+            elif((temp[3]+temp[4])/2<0.6):
+                b=1
+            elif((temp[3]+temp[4])/2>0.7):
+                b=2
+            elif(temp[5]<0.6):
+                b=1
+            elif(temp[5]>0.7):
+                b=2
+            else:
+                b=1
+    return b
+
     
 
 @blueprint.route("/test", methods=["GET", "POST"])
@@ -89,7 +157,7 @@ def upload_predict():
 
         print(Memory_score)
 
-        Speed = round(random.random(), 1)
+        Speed = 1
         
         print(Speed)
 
@@ -108,20 +176,28 @@ def upload_predict():
 
         print(Survey_score)
 
-        if Survey_score < 0.5:
-            value = 'Non-Dyslexic'
-        elif Survey_score >= 1:
-            value = 'Dyslexic (High)'
-        elif Survey_score >= 0.5:
-            value = 'Dyslexic (Moderate)' 
+        feature_values = []
+        feature_values.append(Language_score)
+        feature_values.append(Memory_score)
+        feature_values.append(Speed)
+        feature_values.append(Visual_discrimination)
+        feature_values.append(Audio_discrimination)
+        feature_values.append(Survey_score)
 
-        # label = find_label(feature_values)
-        # if label == 2:
-        #     value = "Non-dyslexic"
-        # elif label == 1:
-        #     value = "Dyslexic (Moderate)"
-        # elif label == 0:
-        #     value = "Dyslexic (High)"
+        # if Survey_score < 0.5:
+        #     value = 'Non-Dyslexic'
+        # elif Survey_score >= 1:
+        #     value = 'Dyslexic (High)'
+        # elif Survey_score >= 0.5:
+        #     value = 'Dyslexic (Moderate)' 
+
+        label = find_label(feature_values)
+        if label == 2:
+            value = "Non-dyslexic"
+        elif label == 1:
+            value = "Dyslexic (Moderate)"
+        elif label == 0:
+            value = "Dyslexic (High)"
         return render_template("home/result.html", prediction=value)
     return render_template("home/demo.html")
     
