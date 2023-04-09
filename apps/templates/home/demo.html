@@ -18,7 +18,7 @@
                       <div class="col-md-6">
                         <div class="detail-box">
                           <h1>
-                            Test
+                            Dyslexia Testor
                             <span>
                               
                             </span>
@@ -30,6 +30,7 @@
                           </p>
                         </div>
                       </div>
+                      <hr>
                       <div class="col-md-6 img-container">
                         <div class="img-box">
                           <img src="images/slider-img.png" alt="">
@@ -388,6 +389,46 @@
     {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      navText: [],
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        420: {
+          items: 2
+        },
+        1000: {
+          items: 5
+        }
+      }
+
+    });
+    var nav = $("#navbarSupportedContent");
+    var btn = $(".custom_menu-btn");
+    btn.click
+    btn.click(function (e) {
+
+      e.preventDefault();
+      nav.toggleClass("lg_nav-toggle");
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    });
+
+    $('.carousel').on('slid.bs.carousel', function () {
+      $(".indicator-2 li").removeClass("active");
+      indicators = $(".carousel-indicators li.active").data("slide-to");
+      a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+      console.log(indicators);
+
+    })
+</script>
+{% endblock javascripts %}
 
 </html>

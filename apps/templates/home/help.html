@@ -4,10 +4,41 @@
 {% block stylesheets %}{% endblock stylesheets %} {% block content %}
 
 <main>
-  <!-- {% include 'includes/preloader.html' %} -->
+
+  <div class="hero_area">
+    {% include 'includes/navigation.html' %}
+    <section class="about_section layout_padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="detail-box">
+                <div class="heading_container">
+                  <h1>
+                    Get in touch
+                  </h1>
+    
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="img-box">
+                <img src="images/about-img.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
 
   <!-- Hero -->
-  <section class="section section-header pb-10 bg-primary text-white">
+  <!-- <section class="section section-header pb-10 bg-primary text-white">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-xl-8 text-center">
@@ -16,7 +47,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
                             <div class="card shadow">
                             <img
@@ -288,8 +319,47 @@
   <!-- End of section -->
 </main>
 
-<!-- {% include 'includes/footer.html' %}  -->
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script>
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    navText: [],
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      420: {
+        items: 2
+      },
+      1000: {
+        items: 5
+      }
+    }
+
+  });
+  var nav = $("#navbarSupportedContent");
+  var btn = $(".custom_menu-btn");
+  btn.click
+  btn.click(function (e) {
+
+    e.preventDefault();
+    nav.toggleClass("lg_nav-toggle");
+    document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+  });
+
+  $('.carousel').on('slid.bs.carousel', function () {
+    $(".indicator-2 li").removeClass("active");
+    indicators = $(".carousel-indicators li.active").data("slide-to");
+    a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+    console.log(indicators);
+
+  })
+</script>
+{% endblock javascripts %}
