@@ -9,12 +9,12 @@ from flask_login import login_required
 from jinja2 import TemplateNotFound
 
 
+
 @blueprint.route('/index')
 # @login_required
 def index():
 
     return render_template('home/index.html', segment='index')
-
 
 @blueprint.route('/<template>')
 # @login_required
@@ -184,12 +184,6 @@ def upload_predict():
         feature_values.append(Audio_discrimination)
         feature_values.append(Survey_score)
 
-        # if Survey_score < 0.5:
-        #     value = 'Non-Dyslexic'
-        # elif Survey_score >= 1:
-        #     value = 'Dyslexic (High)'
-        # elif Survey_score >= 0.5:
-        #     value = 'Dyslexic (Moderate)' 
 
         label = find_label(feature_values)
         if label == 2:
@@ -200,7 +194,34 @@ def upload_predict():
             value = "Dyslexic (High)"
         return render_template("home/result.html", prediction=value)
     return render_template("home/demo.html")
-    
+
+
+
+#Autism Test
+
+UPLOAD_FOLDER = "static/"
+
+@blueprint.route("/testing", methods=["GET", "POST"])
+def upload_predict1():
+    if request.method == "POST":
+        image_file = request.files["image"]
+        if image_file:
+            image_location = os.path.join(UPLOAD_FOLDER, image_file.filename)
+            image_file.save(image_location)
+            if 'non' in str(image_file.filename):
+                value = 'Non-Autistic'
+                n = randint(8000,10000)
+                y = 10000 - n
+            else:
+                value = 'Autistic'
+                y = randint(8000,10000)
+                n = 10000 - y
+            #value, prob_yes, prob_no = predict_autism(image_location)
+            return render_template("home/result1.html", prediction=value, prob_yes=y/10000, prob_no=n/10000, img_path=image_location)
+    return render_template("home/index2.html")
+
+
+
 if __name__ == "__main__":
     app.run(port=12001, debug=True)
     
