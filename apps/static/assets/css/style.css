@@ -1088,3 +1088,67 @@ a:focus {
   background-color: rgb(99, 99, 215);
 }
 
+
+.form-check-input{
+  margin-left: 2em;
+}
+
+
+.form-check-label{
+  margin-left: 3em;
+}
+
+
+.form-group img{
+  margin: 1em;
+  border: 2px solid gray;
+}
+
+.form-group audio{
+  margin: 1em;
+}
+
+
+.pred-btn:focus {
+  outline: none;
+}
+
+.pred-btn{
+  /* width: 8em;
+  padding: 0.8em; */
+  margin: 10%;
+  text-align: center;
+  border-radius: 25px;
+
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+
+    margin-left: 45%;
+}
+
+
+.pred-btn:hover{
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
