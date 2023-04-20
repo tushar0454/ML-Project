@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Autism Detector {% endblock %} 
+{% block title %} Autism Detector {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -9,69 +9,51 @@
 <main>
 	<div class="hero_area">
 		{% include 'includes/navigation.html' %}
-	<section class="slider_section ">
-		<div class="container">
-		  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-			  <div class="carousel-item active">
-				<div class="row">
-				  <div class="col-md-6">
-					<div class="detail-box">
-					  <h1 style="margin-top: 0.5em;">
-						Autism Detector
-					  </h1>
-					  <p style="font-size: 18px; font-weight: bold;">
-						This quiz is specially designed for students to test if they are dyslexic or not. Students are advised to attempt all the questions patiently under the surveillance of an elder.
-						ALL THE BEST JUNIOR!
-					  </p>
-					  <br>
-					  <h2 >Upload image to test for autism</h2>
-						<br>
-					<form method=post enctype=multipart/form-data>
-						<input type=file name=image class="choose-btn">
-						<input type=submit value=Predict>
-						<br>
-						<br>
-						<!-- <img src={{img_path}} alt="Italian Trulli">
-						<h3>Prediction: {{prediction}}</h3> 
-						<br>
-						<br>
-						Probability of autistic: {{prob_yes}}<br>
-						Probability of non-autistic: {{prob_no}} -->
-					</form>
+		<section class="slider_section ">
+			<div class="container">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="detail-box">
+										<h1 style="margin-top: 0.5em;">
+											Autism Detector
+										</h1>
+										<p style="font-size: 18px; font-weight: bold;">
+											This quiz is specially designed for students to test if they are dyslexic or
+											not. Students are advised to attempt all the questions patiently under the
+											surveillance of an elder.
+											ALL THE BEST JUNIOR!
+										</p>
+										<br>
+										<h2>Upload image to test for autism</h2>
+										<br>
+										<form method=post enctype=multipart/form-data>
+											<input type=file name=image class="choose-btn">
+											<input type=submit value=Predict>
+											<br>
+											<br>
+										</form>
 
 
+									</div>
+								</div>
+								<hr>
+								<div class="col-md-6 img-container">
+									<div class="img-box">
+										<!-- <img src="/static/assets/images/slider-img.png" alt=""> -->
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				  </div>
-				  <hr>
-				  <div class="col-md-6 img-container">
-					<div class="img-box">
-					  <!-- <img src="/static/assets/images/slider-img.png" alt=""> -->
-					</div>
-				  </div>
 				</div>
-			  </div>
 			</div>
-		  </div>
-		</div>
-	  </section>
-	  </div>
+		</section>
+	</div>
 
 
-<!-- <h2 align='center'>Upload image to test for autism</h2>
-<br>
-<form align='center' method=post enctype=multipart/form-data>
-	<input type=file name=image>
-    <input type=submit value=Predict>
-	<br>
-	<br>
-	<img src={{img_path}} alt="Italian Trulli">
-	<h3>Prediction: {{prediction}}</h3> 
-	<br>
-	<br>
-	Probability of autistic: {{prob_yes}}<br>
-	Probability of non-autistic: {{prob_no}}
-</form> -->
 
 
 </main>
@@ -81,43 +63,43 @@
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
 <script>
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      navText: [],
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        420: {
-          items: 2
-        },
-        1000: {
-          items: 5
-        }
-      }
+	$(".owl-carousel").owlCarousel({
+		loop: true,
+		margin: 10,
+		nav: true,
+		navText: [],
+		autoplay: true,
+		autoplayHoverPause: true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			420: {
+				items: 2
+			},
+			1000: {
+				items: 5
+			}
+		}
 
-    });
-    var nav = $("#navbarSupportedContent");
-    var btn = $(".custom_menu-btn");
-    btn.click
-    btn.click(function (e) {
+	});
+	var nav = $("#navbarSupportedContent");
+	var btn = $(".custom_menu-btn");
+	btn.click
+	btn.click(function (e) {
 
-      e.preventDefault();
-      nav.toggleClass("lg_nav-toggle");
-      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
-    });
+		e.preventDefault();
+		nav.toggleClass("lg_nav-toggle");
+		document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+	});
 
-    $('.carousel').on('slid.bs.carousel', function () {
-      $(".indicator-2 li").removeClass("active");
-      indicators = $(".carousel-indicators li.active").data("slide-to");
-      a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
-      console.log(indicators);
+	$('.carousel').on('slid.bs.carousel', function () {
+		$(".indicator-2 li").removeClass("active");
+		indicators = $(".carousel-indicators li.active").data("slide-to");
+		a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+		console.log(indicators);
 
-    })
+	})
 </script>
 {% endblock javascripts %}
 

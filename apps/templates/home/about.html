@@ -4,37 +4,172 @@
 {% block stylesheets %}{% endblock stylesheets %} {% block content %}
 
 <main>
-    <div class="hero_area">
-        {% include 'includes/navigation.html' %}
-        <section class="about_section layout_padding">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <div class="heading_container">
-                      <h2>
-                        About Us
-                      </h2>
-        
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                      dolore magna aliqua. Ut enim ad minim veniam
-                    </p>
-                    <a href="">
-                      Read More
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                    <img src="images/about-img.png" alt="">
-                  </div>
-                </div>
+  <div class="hero_area">
+    {% include 'includes/navigation.html' %}
+    <section class="about_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  About Us
+                </h2>
+
               </div>
+
+              <div class="myBox">
+                <i style="font-size: 1.5rem; color: green;">Hola, everyone!
+                  <br>
+                  Team Neurodetect welcomes you all warmly.
+                </i>
+                <br>
+                <br>
+                <div>
+                  This space has been brewed and built with an understanding that each child is different and unique.
+                  Learning disorders, as we know them does not limit the capability of your little ones.
+                  It offers an opportunities to us to be able to perceive these young caterpillars with a newer
+                  perspective.
+                  This being said, it becomes very important as guardians and parents that we look observe the kids,
+                  and look for any unusual symptoms and signs. But not being medical professionals can create a
+                  wide gap between our comprehensive potential and a child's need.
+                </div>
+                <br>
+
+                <div>
+                  We, at Neurodetect work together to bring out a way for parents and adults understand if their
+                  loved ones have a possibility of one of these two most common disorders : <strong>Autism & Dyslexia.
+                  </strong>
+                  <br>
+                  This solution brings together code and care together for a single cause. To get a brief about this
+                  app:
+                  We have two main services that we provide:
+                </div>
+                <br>
+
+                <div>
+                  <strong>Dyslexia </strong>: Dyslexia is a learning disorder that involves difficulty reading due to
+                  problems
+                  identifying speech sounds and learning how they relate to letters and words (decoding).
+                  Also called a reading disability, dyslexia is a result of individual differences in areas
+                  of the brain that process language.
+                  <br>
+                  Neurodetect's Dyslexia Detector basically provides a mechanism through which a child can go through a
+                  small quiz including questions covering aspects like:
+                </div>
+                <br>
+
+                <ul>
+                  <strong>
+                    <li>Vision</li>
+                    <li>Memory</li>
+                    <li>Sound</li>
+                    <li>Vocabulary</li>
+                    <li>Speed</li>
+                  </strong>
+                </ul>
+                <br>
+
+                <div>
+                  On the basis of the answers recorded for each user, points are awarded to the user and
+                  stored at backend, in form of testing data. These scores are analysed properly using
+                  a machine learning algorithm.
+                </div>
+                <br>
+
+                <div>
+                  Please note that this testor is a dynamic service, and you can test it in real time.
+                  Graphs are also displayed to get a better understanding which models have been used and
+                  why.
+                </div>
+                <br>
+
+                <div>
+                  Error, Precision & Recall are some of the most significant metrics for determining
+                  the model used.
+                </div>
+
+                <p>Calculations of Scores -</p>
+                <p>
+                <ul>
+                  <li>Language_vocab = (Ans.1 + Ans.2 + Ans.3 + Ans.4 + Ans.5 + Ans.6 + Ans.8)/28 </li>
+                  <li> Memory = (Ans.2 + Ans.9)/8</li>
+                  <li>Speed = Calculated on the basis of time taken to complete the quiz</li>
+                  <li>Visual_discrimination = (Ans.1 + Ans.3 + Ans.4 + Ans.6)/16</li>
+                  <li>Audio_Discrimination = (Ans.7 + Ans.10)/8</li>
+                  <li>Survey_Score = (Sum of all answers)/80</li>
+                </ul>
+                </p>
+
+                <div>
+                  <strong>Autism </strong>: Autism spectrum disorder is a condition related to brain development that
+                  impacts
+                  how a person perceives and socializes with others, causing problems in social
+                  interaction and communication. The disorder also includes limited and repetitive patterns
+                  of behavior. The term <i>"spectrum" </i>in autism spectrum disorder refers to the wide range of
+                  symptoms and severity.
+                </div>
+                <br>
+
+                <div>
+                  Neurodetect's Autism Detector basically makes use of neural network models to get a precise
+                  result of whether or not a child has Autism.
+                </div>
+                <br>
+
+                <div>
+                  Please note that this service is not dynamic as of now. The model on front-end will ideally be
+                  consuming the user image as an input and an image detection model, utilizing openCV capabilities
+                  of Python will be used here.
+                </div>
+                <br>
+
+                <div>
+                  Once the facial features are detected and analysed, they are sent as a test/validation data
+                  to the model and we get the result. But since here we are facing some error while integrating
+                  these two modules, we have prefered to keep this functionality static.
+                </div>
+                <br>
+
+                <div>
+                  However, this must be noted in all the cases that these diorders are just a biological/
+                  bodily issues and has nothing to do with intelligence and brilliance of a child.
+                  The youth of today are not only smart but also effecient and bright. Don't let these
+                  little hurdles make them feel low of themselves. They need and deserve all your
+                  support and encouragement.
+                </div>
+                <br>
+
+                <div>
+                  P.S: Parents, guardians and professionals using Neurodetect are advised to seek
+                  professional help before jumping to conclusions. Let's not forget that the
+                  accuracy of this mechanism is determined by a modeled machine, which may not
+                  always be on point and it's always advisable to consult doctors and professionals
+                  for the final results.
+                  <br>
+                </div>
+
+                <p> Thanks & Regards,</p>
+                <i style="font-size: 1.5rem; color: green;">
+                  Team Neurodetect.
+                </i>
+              </div>
+
+
+              <!-- <a href="">
+                Read More
+              </a> -->
             </div>
-          </section>
-    </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="images/about-img.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
 </main>
 
@@ -44,43 +179,46 @@
 {% block javascripts %}
 
 <script>
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      navText: [],
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        420: {
-          items: 2
-        },
-        1000: {
-          items: 5
-        }
+
+
+
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    navText: [],
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      420: {
+        items: 2
+      },
+      1000: {
+        items: 5
       }
+    }
 
-    });
-    var nav = $("#navbarSupportedContent");
-    var btn = $(".custom_menu-btn");
-    btn.click
-    btn.click(function (e) {
+  });
+  var nav = $("#navbarSupportedContent");
+  var btn = $(".custom_menu-btn");
+  btn.click
+  btn.click(function (e) {
 
-      e.preventDefault();
-      nav.toggleClass("lg_nav-toggle");
-      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
-    });
+    e.preventDefault();
+    nav.toggleClass("lg_nav-toggle");
+    document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+  });
 
-    $('.carousel').on('slid.bs.carousel', function () {
-      $(".indicator-2 li").removeClass("active");
-      indicators = $(".carousel-indicators li.active").data("slide-to");
-      a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
-      console.log(indicators);
+  $('.carousel').on('slid.bs.carousel', function () {
+    $(".indicator-2 li").removeClass("active");
+    indicators = $(".carousel-indicators li.active").data("slide-to");
+    a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+    console.log(indicators);
 
-    })
+  })
 </script>
 
 {% endblock javascripts %}

@@ -37,38 +37,7 @@
       </section>
 </div>
 
-  <!-- Hero -->
-  <!-- <section class="section section-header pb-10 bg-primary text-white">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-xl-8 text-center">
-          <h1 class="display-2 mb-3">Get in touch today</h1>
-          <p class="lead">Here to assist you whenever you need a hand.</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
-                            <div class="card shadow">
-                            <img
-                                src="/static/assets/img/blog/image-1.jpg"
-                                class="card-img-top rounded-top"
-                                alt="Themesberg office"
-                            />
-                            <div class="card-body">
-                                <span class="h6 icon-tertiary small"
-                                ><span class="fas fa-medal me-2"></span>Awards</span
-                                >
-                                <h3 class="h5 card-title mt-3">We partnered up with Google</h3>
-                                <p class="card-text">
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                                </p>
-                                <a href="#" class="btn btn-primary btn-sm">Learn More</a>
-                            </div>
-                            </div>
-                        </div> -->
-  <!-- Section -->
+ 
   <div class="section py-0">
     <div class="container mt-n10">
       <div class="row">
@@ -151,13 +120,11 @@
             </div>
           </div>
 
-          <!-- CARDS -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- video carousel -->
 
   <!-- Section -->
   <section class="section section-lg pt-6">
@@ -171,8 +138,8 @@
               <p>Submit your inquiry and get the medical help you need.</p>
             </div>
             <div class="card-body px-0 pt-0">
-              <form action="#">
-                <!-- Form -->
+              <form action="#" name="submit-to-google-sheet">
+
                 <div class="mb-4">
                   <label for="name">Your Name</label>
                   <div class="input-group">
@@ -183,13 +150,13 @@
                       type="text"
                       class="form-control"
                       placeholder="e.g. Bonnie Green"
+                      name="Name"
                       id="name"
                       required
                     />
                   </div>
                 </div>
-                <!-- End of Form -->
-                <!-- Form -->
+   
                 <div class="mb-4">
                   <label for="email">Your Email</label>
                   <div class="input-group">
@@ -200,23 +167,25 @@
                       type="email"
                       class="form-control"
                       placeholder="example@company.com"
+                      name="Email"
                       id="email"
                       required
                     />
                   </div>
                 </div>
-                <!-- End of Form -->
+              
                 <div class="mb-4">
                   <label for="message">Your Message</label>
                   <textarea
                     placeholder="Your message"
+                    name="Message"
                     class="form-control"
                     id="message"
                     rows="4"
                     required
                   ></textarea>
                 </div>
-                <!-- End of Form -->
+
                 <div class="d-grid">
                   <button type="submit" class="btn rounded btn-secondary">
                     Send message
@@ -225,7 +194,7 @@
               </form>
             </div>
           </div>
-          <!-- End of Contact Card -->
+
         </div>
       </div>
       <div class="row">
@@ -316,7 +285,6 @@
       </div>
     </div>
   </section>
-  <!-- End of section -->
 </main>
 
 {% endblock content %}
@@ -361,5 +329,36 @@
     console.log(indicators);
 
   })
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwhIkYlKAq_x4uE1FH0amtLj6cSkOd7ssPkLOaHUmKwce4YFelDU4S9qZvHnt6zIAkeSQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent Successfully."
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent Successfully."
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
 </script>
 {% endblock javascripts %}
