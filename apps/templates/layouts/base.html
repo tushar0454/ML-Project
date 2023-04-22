@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<head>
+    <title>Dyslexia and Autism Detector</title>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/png" href="static/assets/images/l1 (2).png" />
 
-<title>
-    Dyslexia and Autism Detector
-</title>
+    <!-- Fontawesome -->
+    <link
+      type="text/css"
+      href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
 
-<link rel="icon" type="image/png" href="/static/assets/images/l1.png">
+    <!-- Pixel CSS -->
+    <link
+      type="text/css"
+      href="/static/assets/css/pixel.css"
+      rel="stylesheet"
+    />
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
 
-<!-- Fontawesome -->
-<link type="text/css" href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!-- bootstrap core css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/assets/css/bootstrap.css"
+    />
 
-<!-- Pixel CSS -->
-<link type="text/css" href="/static/assets/css/pixel.css" rel="stylesheet">
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Custom styles for this template -->
+    <link href="/static/assets/css/style.css" rel="stylesheet" />
 
-<link rel="stylesheet" type="text/css"
-href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+    <!-- responsive style -->
+    <link href="/static/assets/css/responsive.css" rel="stylesheet" />
 
-<!-- bootstrap core css -->
-<link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.css" />
-
-
-
-<!-- fonts style -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
-
-<!-- Custom styles for this template -->
-<link href="/static/assets/css/style.css" rel="stylesheet" />
-
-<!-- responsive style -->
-<link href="/static/assets/css/responsive.css" rel="stylesheet" />
-
-<!-- Specific Page JS goes HERE  -->    
-{% block stylesheets %}{% endblock stylesheets %}
-
-</head>
-<body>
-
-
-
-    {% block content %}{% endblock content %}
-
-    {% include 'includes/scripts.html' %}
-
-    {%include 'includes/footer.html' %}
-
-
-
+    <!-- Specific Page JS goes HERE  -->
+    {% block stylesheets %}{% endblock stylesheets %}
+  </head>
+  <body>
+    {% block content %}{% endblock content %} {% include 'includes/scripts.html'
+    %} {%include 'includes/footer.html' %}
 
     <!-- Specific Page JS goes HERE  -->
     {% block javascripts %}{% endblock javascripts %}
-
-</body>
+  </body>
 </html>

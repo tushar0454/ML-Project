@@ -1,159 +1,259 @@
-{% extends "layouts/base.html" %}
-
-{% block title %} About {% endblock %} 
+{% extends "layouts/base.html" %} {% block title %} About {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
 
-{% block content %}
-
-    <main>
-        
-        <div class="hero_area">
-          {% include 'includes/navigation.html' %}
-        <section class="slider_section ">
-            <div class="container">
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="detail-box">
-                          <h1>
-                            What is Learning Disability
-                          </h1>
-                          <p style="font-size: 16px;">
-                            Learning disability, learning disorder, or learning difficulty (British English) is a condition in the brain that causes difficulties comprehending or processing information and can be caused by several different factors.While learning disability and learning disorder are often used interchangeably, they differ in many ways. Disorder refers to significant learning problems in an academic area. These problems, however, are not enough to warrant an official diagnosis. Learning disability, on the other hand, is an official clinical diagnosis, whereby the individual meets certain criteria, as determined by a professional (such as a psychologist, psychiatrist, speech language pathologist, or pediatrician). The difference is in degree, frequency, and intensity of reported symptoms and problems, and thus the two should not be confused. 
-
-
-                          </p>
-                          <div class="btn-box">
-                            <a href="https://en.wikipedia.org/wiki/Learning_disability" target="_blank" class="btn-1">
-                              Read More
-                            </a>
-                            <a href="" class="btn-2">
-                              Contact us
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-5 img-container">
-                        <div class="img-box">
-                          <img src="/static/assets/images/My project-1.png" alt="Image" style="width: auto; height: 26rem; ">
-                        </div>
-                      </div>
+<main>
+  <div class="hero_area">
+    {% include 'includes/navigation.html' %}
+    <section class="slider_section">
+      <div class="container">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1 style="font-family: 'Libre Baskerville', serif">
+                      What is Learning Disability
+                    </h1>
+                    <p
+                      style="
+                        font-family: 'Playfair Display', serif;
+                        font-size: 20px;
+                      "
+                    >
+                      Learning disability, learning disorder, or learning
+                      difficulty (British English) is a condition in the brain
+                      that causes difficulties comprehending or processing
+                      information and can be caused by several different
+                      factors.While learning disability and learning disorder
+                      are often used interchangeably, they differ in many ways.
+                      Disorder refers to significant learning problems in an
+                      academic area. These problems, however, are not enough to
+                      warrant an official diagnosis. Learning disability, on the
+                      other hand, is an official clinical diagnosis, whereby the
+                      individual meets certain criteria, as determined by a
+                      professional (such as a psychologist, psychiatrist, speech
+                      language pathologist, or pediatrician). The difference is
+                      in degree, frequency, and intensity of reported symptoms
+                      and problems, and thus the two should not be confused.
+                    </p>
+                    <div class="btn-box">
+                      <a
+                        href="https://en.wikipedia.org/wiki/Learning_disability"
+                        target="_blank"
+                        class="btn-1"
+                      >
+                        Read More
+                      </a>
+                      <a href="" class="btn-2"> Contact us </a>
                     </div>
                   </div>
-                  <div class="carousel-item ">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="detail-box">
-                          <h1>
-                            Dyslexia
-                            <span>
-                                
-                            </span>
-                          </h1>
-                          <p>
-                            Dyslexia is a learning disorder that involves difficulty reading due to problems identifying speech sounds and learning how they relate to letters and words (decoding). Also called a reading disability, dyslexia is a result of individual differences in areas of the brain that process language.Dyslexia is not due to problems with intelligence, hearing or vision. Most children with dyslexia can succeed in school with tutoring or a specialized education program. Emotional support also plays an important role.</p>
-                           <p>Though there's no cure for dyslexia, early assessment and intervention result in the best outcome. Sometimes dyslexia goes undiagnosed for years and isn't recognized until adulthood, but it's never too late to seek help.
-                           </p>
-
-
-                          <div class="btn-box">
-                            <a href="https://en.wikipedia.org/wiki/Dyslexia" target="_blank" class="btn-1">
-                              Read More
-                            </a>
-                            <a href="" class="btn-2">
-                              Contact us
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-5 img-container">
-                        <div class="img-box">
-                          <img src="/static/assets/img/t1.png" alt="" style="width: auto; height: 10rem;">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item ">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="detail-box">
-                          <h1>
-                            Autism
-                          </h1>
-                          <p>
-                            Autism spectrum disorder (ASD) is a developmental disability caused by differences in the brain. Some people with ASD have a known difference, such as a genetic condition. Other causes are not yet known. Scientists believe there are multiple causes of ASD that act together to change the most common ways people develop. We still have much to learn about these causes and how they impact people with ASD. The abilities and needs of autistic people vary and can evolve over time. While some people with autism can live independently, others have severe disabilities and require life-long care and support. Autism often has an impact on education and employment opportunities. In addition, the demands on families providing care and support can be significant. Societal attitudes and the level of support provided by local and national authorities are important factors determining the quality of life of people with autism. Characteristics of autism may be detected in early childhood, but autism is often not diagnosed until much later.
-                          </p>
-                          <div class="btn-box">
-                            <a href="https://en.wikipedia.org/wiki/Autism_spectrum" target="_blank" class="btn-1">
-                              Read More
-                            </a>
-                            <a href="" class="btn-2">
-                              Contact us
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-5 img-container">
-                        <div class="img-box">
-                          <img src="/static/assets/images/My project.png" alt="Autism Image" style="width: auto; height: 31rem;">
-                        </div>
-                      </div>
-                    </div>
+                </div>
+                <div class="col-md-5 img-container">
+                  <div class="img-box">
+                    <img
+                      src="/static/assets/images/My project-1.png"
+                      alt="Image"
+                      style="width: auto; height: 26rem"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1 style="font-family: 'Libre Baskerville', serif">
+                      Dyslexia
+                      <span> </span>
+                    </h1>
+                    <p
+                      style="
+                        font-family: 'Playfair Display', serif;
+                        font-size: 20px;
+                      "
+                    >
+                      Dyslexia is a learning disorder that involves difficulty
+                      reading due to problems identifying speech sounds and
+                      learning how they relate to letters and words (decoding).
+                      Also called a reading disability, dyslexia is a result of
+                      individual differences in areas of the brain that process
+                      language.Dyslexia is not due to problems with
+                      intelligence, hearing or vision. Most children with
+                      dyslexia can succeed in school with tutoring or a
+                      specialized education program. Emotional support also
+                      plays an important role.
+                    </p>
+                    <p>
+                      Though there's no cure for dyslexia, early assessment and
+                      intervention result in the best outcome. Sometimes
+                      dyslexia goes undiagnosed for years and isn't recognized
+                      until adulthood, but it's never too late to seek help.
+                    </p>
 
-        <section class="section section-md" id="test_section">
-            <div class="container">
-                <div class="row align-items-center justify-content-around">
-                    <div class="col-md-6 col-xl-6 mb-5">
-                        <img class="float-left" src="/static/assets/img/output-onlinegiftools.gif" alt="Dyslexia Image">
+                    <div class="btn-box">
+                      <a
+                        href="https://en.wikipedia.org/wiki/Dyslexia"
+                        target="_blank"
+                        class="btn-1"
+                      >
+                        Read More
+                      </a>
+                      <a href="" class="btn-2"> Contact us </a>
                     </div>
-                    <div class="col-md-6 col-xl-5 text-md-left">
-                        <h2 class="h1 mb-5">Want to know if your child is Dyslexic or not?</h2>
-                        <a href="demo.html" target="_blank" id="test-button" class="btn btn-primary me-2 animate-up-2">Take Test <span class="ms-2"><span class="fas fa-arrow-right"></span></span></a>
-              
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-
- 
-
-
-        <section class="section section-md" id="test1_section">
-          <div class="container">
-              <div class="row align-items-center justify-content-around">
-                <div class="col-md-6 col-xl-5 text-md-left">
-                  <h2 class="h1 mb-5">Is it the case that your child has autism or not?</h2>
-                  <a href="index2.html" target="_blank" id="test-button" class="btn btn-primary me-2 animate-up-2">Take Test <span class="ms-2"><span class="fas fa-arrow-right"></span></span></a>
-              </div>
-                  <div class="col-md-6 col-xl-6 mb-5">
-                      <img class="float-right" src="/static/assets/img/output-onlinegiftools.gif" alt="Dyslexia Image">
                   </div>
-
+                </div>
+                <div class="col-md-5 img-container">
+                  <div class="img-box">
+                    <img
+                      src="/static/assets/img/t1.png"
+                      alt=""
+                      style="width: auto; height: 10rem"
+                    />
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1 style="font-family: 'Libre Baskerville', serif">
+                      Autism
+                    </h1>
+                    <p
+                      style="
+                        font-family: 'Playfair Display', serif;
+                        font-size: 20px;
+                      "
+                    >
+                      Autism spectrum disorder (ASD) is a developmental
+                      disability caused by differences in the brain. Some people
+                      with ASD have a known difference, such as a genetic
+                      condition. Other causes are not yet known. Scientists
+                      believe there are multiple causes of ASD that act together
+                      to change the most common ways people develop. We still
+                      have much to learn about these causes and how they impact
+                      people with ASD. The abilities and needs of autistic
+                      people vary and can evolve over time. While some people
+                      with autism can live independently, others have severe
+                      disabilities and require life-long care and support.
+                      Autism often has an impact on education and employment
+                      opportunities. In addition, the demands on families
+                      providing care and support can be significant. Societal
+                      attitudes and the level of support provided by local and
+                      national authorities are important factors determining the
+                      quality of life of people with autism. Characteristics of
+                      autism may be detected in early childhood, but autism is
+                      often not diagnosed until much later.
+                    </p>
+                    <div class="btn-box">
+                      <a
+                        href="https://en.wikipedia.org/wiki/Autism_spectrum"
+                        target="_blank"
+                        class="btn-1"
+                      >
+                        Read More
+                      </a>
+                      <a href="" class="btn-2"> Contact us </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5 img-container">
+                  <div class="img-box">
+                    <img
+                      src="/static/assets/images/My project.png"
+                      alt="Autism Image"
+                      style="width: auto; height: 31rem"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          
-      </section>
+        </div>
+      </div>
+    </section>
+  </div>
 
+  <section class="section section-md" id="test_section">
+    <div class="container">
+      <div class="row align-items-center justify-content-around">
+        <div class="col-md-6 col-xl-6 mb-5">
+          <img
+            class="float-left"
+            src="/static/assets/img/output-onlinegiftools.gif"
+            alt="Dyslexia Image"
+          />
+        </div>
+        <div class="col-md-6 col-xl-5 text-md-left">
+          <h2
+            class="h1 mb-5"
+            style="font-family: 'Libre Baskerville', serif"
+            id="test1"
+          >
+            Want to know if your child is Dyslexic or not?
+          </h2>
+          <a
+            href="demo.html"
+            target="_blank"
+            id="test-button"
+            class="btn btn-primary me-2 animate-up-2"
+            >Take Test
+            <span class="ms-2"><span class="fas fa-arrow-right"></span></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </main>
-
+  <section class="section section-md" id="test1_section">
+    <div class="container">
+      <div class="row align-items-center justify-content-around">
+        <div class="col-md-6 col-xl-5 text-md-left">
+          <h2
+            class="h1 mb-5"
+            style="font-family: 'Libre Baskerville', serif"
+            id="test2"
+          >
+            Is it the case that your child has autism or not?
+          </h2>
+          <a
+            href="index2.html"
+            target="_blank"
+            id="test-button"
+            class="btn btn-primary me-2 animate-up-2"
+            >Take Test
+            <span class="ms-2"><span class="fas fa-arrow-right"></span></span
+          ></a>
+        </div>
+        <div class="col-md-6 col-xl-6 mb-5">
+          <img
+            class="float-right"
+            src="/static/assets/img/output-onlinegiftools.gif"
+            alt="Dyslexia Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 {% endblock content %}
 
@@ -161,8 +261,7 @@
 {% block javascripts %}
 
 <script>
-
-$(".owl-carousel").owlCarousel({
+  $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
@@ -171,38 +270,36 @@ $(".owl-carousel").owlCarousel({
     autoplayHoverPause: true,
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       420: {
-        items: 2
+        items: 2,
       },
       1000: {
-        items: 5
-      }
-    }
-
+        items: 5,
+      },
+    },
   });
-
 
   var nav = $("#navbarSupportedContent");
   var btn = $(".custom_menu-btn");
-  btn.click
+  btn.click;
   btn.click(function (e) {
-
     e.preventDefault();
     nav.toggleClass("lg_nav-toggle");
-    document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    document
+      .querySelector(".custom_menu-btn")
+      .classList.toggle("menu_btn-style");
   });
 
-
-  $('.carousel').on('slid.bs.carousel', function () {
+  $(".carousel").on("slid.bs.carousel", function () {
     $(".indicator-2 li").removeClass("active");
     indicators = $(".carousel-indicators li.active").data("slide-to");
-    a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+    a = $(".indicator-2")
+      .find("[data-slide-to='" + indicators + "']")
+      .addClass("active");
     console.log(indicators);
-
-  })
-
+  });
 </script>
 
 {% endblock javascripts %}
