@@ -63,7 +63,7 @@ import cv2
 from flask import Flask
 from flask import request
 from flask import render_template
-# from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 import random
 import pickle
 
