@@ -199,26 +199,26 @@ def upload_predict():
 
 #Autism Test
 
-UPLOAD_FOLDER = "static/"
+# UPLOAD_FOLDER = "static/"
 
-@blueprint.route("/testing", methods=["GET", "POST"])
-def upload_predict1():
-    if request.method == "POST":
-        image_file = request.files["image"]
-        if image_file:
-            image_location = os.path.join(UPLOAD_FOLDER, image_file.filename)
-            image_file.save(image_location)
-            if 'non' in str(image_file.filename):
-                value = 'Non-Autistic'
-                n = randint(8000,10000)
-                y = 10000 - n
-            else:
-                value = 'Autistic'
-                y = randint(8000,10000)
-                n = 10000 - y
-            #value, prob_yes, prob_no = predict_autism(image_location)
-            return render_template("home/result1.html", prediction=value, prob_yes=y/10000, prob_no=n/10000, img_path=image_location)
-    return render_template("home/index2.html")
+# @blueprint.route("/testing", methods=["GET", "POST"])
+# def upload_predict1():
+#     if request.method == "POST":
+#         image_file = request.files["image"]
+#         if image_file:
+#             image_location = os.path.join(UPLOAD_FOLDER, image_file.filename)
+#             image_file.save(image_location)
+#             if 'non' in str(image_file.filename):
+#                 value = 'Non-Autistic'
+#                 n = randint(8000,10000)
+#                 y = 10000 - n
+#             else:
+#                 value = 'Autistic'
+#                 y = randint(8000,10000)
+#                 n = 10000 - y
+#             #value, prob_yes, prob_no = predict_autism(image_location)
+#             return render_template("home/result1.html", prediction=value, prob_yes=y/10000, prob_no=n/10000, img_path=image_location)
+#     return render_template("home/index2.html")
 
 
 
