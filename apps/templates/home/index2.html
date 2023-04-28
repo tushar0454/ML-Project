@@ -31,9 +31,10 @@
 										<h2 style="font-family: 'Playfair Display', serif;
 										font-size: 24px;">Upload image to test for autism</h2>
 										<br>
-										<form method=post enctype=multipart/form-data>
+										<form   method=post enctype=multipart/form-data>
 											<input type=file name=image class="choose-btn">
-											<input type=submit value=Predict class="pred-btn">
+											<!-- <input type=submit value=Predict class="pred-btn" > -->
+											<button id="btn" class="pred-btn" onclick="sub()">Predict</button>
 											<br>
 											<br>
 										</form>
@@ -102,6 +103,15 @@
 		console.log(indicators);
 
 	})
+
+	// document.getElementById("btn").onclick = function () {
+	// 	location.href = "/templates/home/result1.html"
+	// }
+
+	function sub(){
+		window.location.href="/templates/home/result1.html"
+	}
+
 </script>
 {% endblock javascripts %}
 
