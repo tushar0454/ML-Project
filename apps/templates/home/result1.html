@@ -1,3 +1,4 @@
+<!-- 
 <!doctype html>
 <title>Autism Detector</title>
 <h1 align='center'>Autism Detector - Test Results</h1>
@@ -12,7 +13,6 @@
 	<input type=submit value="Make another prediction">
 </form>
 
-<!-- image -->
 
 <style>
 	.img-container {
@@ -99,14 +99,195 @@
 			<p class="img-text">Precision : </p>
 		</div>
 	</div>
-	<!-- <div class="gallery" style="height: 50vh !important">
-		<p style="text-align: center; ">Random Classifier</p>
-		<img src="/static/assets/images/a3.jpg"> 
+
+	<div class="gallery" style="height: 50vh !important">
+		<p style="text-align: center; ">Relationship between ASD and occurrence of Jaundice in patients via Violin Plot.</p>
+		<img src="/static/assets/images/a6.jpg">
 		<div class="image-overlay">
 			<p class="img-text">Accuracy : </p>
 			<p class="img-text">Precision : </p>
 		</div>
-	</div> -->
+	</div>
+</div>
+
+</html> -->
+
+
+<!doctype html>
+<title>Autism Detector</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+	@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
+	.img-container {
+		margin-top: 10px !important;
+		max-width: 1400px;
+		margin: auto;
+		overflow: auto;
+		position: relative;
+	}
+
+	.gallery {
+		margin: 31px;
+		border: 1px solid #ccc;
+		float: left;
+		width: 390px;
+		position: relative;
+	}
+
+	.gallery p {
+		position: relative;
+		font-family: 'Libre Baskerville', serif;
+		color: #0077b6;
+		font-size: 1.4em;
+	}
+
+	.gallery img {
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+
+	.gallery img:hover {
+		cursor: pointer;
+		transform: scale(1.02);
+		transition: 3s;
+	}
+
+	.image-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+	}
+
+	.image-overlay:hover {
+		opacity: 1;
+	}
+
+	.image-overlay p {
+		font-family: 'Libre Baskerville', serif;
+		font-weight: bold;
+		color: #616161;
+		font-size: 1.4em;
+	}
+
+
+	h1 {
+		padding-top: 15px;
+		font-family: 'Libre Baskerville', serif;
+		color: #0077b6;
+		margin-left: 300px;
+	}
+
+	h2 {
+		color: #0077b6;
+		font-family: 'Playfair Display', serif;
+	}
+
+	.pred2-btn {
+		padding: 15px !important;
+		margin: 10%;
+		text-align: center;
+		border-radius: 25px;
+
+		/* width: 160px; */
+		font-size: 16px;
+		font-weight: 600;
+		color: #03045e;
+		cursor: pointer;
+		margin: 20px;
+		height: 55px;
+		text-align: center;
+		border: none;
+		background-size: 300% 100%;
+
+		border-radius: 50px;
+		background-image: linear-gradient(to right,
+				#0096c7,
+				#00b4d8,
+				#90e0ef,
+				#48cae4);
+		box-shadow: 0 4px 15px 0 #90e0ef;
+		/* align-content: center; */
+
+	}
+
+	.pred2-btn:hover {
+		background-position: 100% 0;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-webkit-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+	}
+
+	.head1r {
+		display: flex;
+
+	}
+
+	.divsec {
+		background-color: #caf0f8;
+
+	}
+</style>
+
+
+<div class="head1r"><a class="navbar1-brand" href="index.html">
+		<img src="/static/assets/images/logo.png" alt="Logo"
+			style="width: 230px; margin-left: 10px ;margin-top: 10px;" />
+	</a>
+	<h1 align="center">Autism Detector - Test Results</h1>
+</div>
+
+
+
+<div class="divsec">
+	<hr>
+	<br>
+	<form align='center' method=get enctype=multipart/form-data>
+		<br>
+		<br>
+		<h2 style="font-family: 'Playfair Display', serif;">Prediction: {{prediction}}</h3>
+			<br>
+			<br><br>
+			<input class="pred2-btn" type=submit value="Make another prediction" >
+	</form>
+
+
+
+	
+<div class="img-container">
+	<div class="gallery" style="height: 50vh !important">
+		<p style="text-align: center; ">Gender-wise relationship between Jaundice and Result</p>
+		<img src="/static/assets/images/a1.jpg">
+	</div>
+	<div class="gallery" style="height: 50vh !important">
+		<p style="text-align: center; ">Decision Tree</p>
+		<img src="/static/assets/images/a2.jpg">
+		<div class="image-overlay">
+			<p class="img-text">Accuracy : 1.0</p>
+			<p class="img-text">Precision : </p>
+		</div>
+	</div>
+	
+	<div class="gallery" style="height: 50vh !important">
+		<p style="text-align: center; ">Classwise relationship between Jaundice and result.</p>
+		<img src="/static/assets/images/a5.jpg">
+		<div class="image-overlay">
+			<p class="img-text">Accuracy : </p>
+			<p class="img-text">Precision : </p>
+		</div>
+	</div>
 
 	<div class="gallery" style="height: 50vh !important">
 		<p style="text-align: center; ">Relationship between ASD and occurrence of Jaundice in patients via Violin Plot.</p>
@@ -119,5 +300,6 @@
 </div>
 
 
-
-</html>
+	<br><br>
+</div>
+{% extends "layouts/base.html" %}

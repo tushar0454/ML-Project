@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
@@ -902,6 +903,8 @@ a:focus {
 .info_section .info_logo h2 {
   text-transform: uppercase;
   font-weight: bold;
+  color: #caf0f8;
+  font-family: 'Playfair Display', serif;
 }
 
 .info_section h5 {
@@ -1407,4 +1410,11 @@ a:focus {
 }
 .social-menu ul li:nth-child(4) a:hover{
   background-color: #000;
+}
+
+
+#test_section,
+#dys-test,
+#card-help {
+  background-color: #caf0f8;
 }
