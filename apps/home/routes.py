@@ -1,8 +1,3 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 from apps.home import blueprint
 from flask import render_template, request
 from flask_login import login_required
@@ -192,8 +187,8 @@ def upload_predict():
             value = "Dyslexic (Moderate)"
         elif label == 0:
             value = "Dyslexic (High)"
-        return render_template("home/result.html", prediction=value)
-    return render_template("home/demo.html")
+        return render_template("home/dyslexia_result.html", prediction=value)
+    return render_template("home/dyslexia.html")
 
 
 
@@ -219,7 +214,6 @@ def upload_predict():
 #             #value, prob_yes, prob_no = predict_autism(image_location)
 #             return render_template("home/result1.html", prediction=value, prob_yes=y/10000, prob_no=n/10000, img_path=image_location)
 #     return render_template("home/index2.html")
-
 
 
 if __name__ == "__main__":

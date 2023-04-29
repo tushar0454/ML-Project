@@ -1224,33 +1224,11 @@ a:focus {
   display: block;
 }
 
-/* .detail-box .heading_container .helpbtn a {
-  text-transform: uppercase;
-  text-align: center;
-  width: 135px;
-  font-size: 15px;
-}
 
-.detail-box .heading_container .helpbtn {
-  display: inline-block;
-  padding: 6px 0;
-  background-color: #023e8a;
-  color: #ade8f4;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 1px solid transparent;
-  border-radius: 20px;
-  margin-right: 5px;
-}
-
-.detail-box .heading_container .helpbtn:hover {
-  background-color: transparent;
-  border-color: #ade8f4;
-  color: #03045e;
-} */
 
 #card1 {
   border: #023e8a 2px solid !important;
+  border-radius: 20px;
 }
 #card1:hover {
   border: #00b4d8 2px solid !important;
@@ -1258,6 +1236,7 @@ a:focus {
 
 #card2 {
   border: #023e8a 2px solid !important;
+  border-radius: 20px;
 }
 #card2:hover {
   border: #00b4d8 2px solid !important;
@@ -1265,9 +1244,17 @@ a:focus {
 
 #card3 {
   border: #023e8a 2px solid !important;
+  border-radius: 20px;
 }
 #card3:hover {
   border: #00b4d8 2px solid !important;
+}
+
+
+#card-image-1, 
+#card-image-2,
+ #card-image-3{
+  border-radius: 20px;
 }
 
 #help-head1,
@@ -1282,7 +1269,7 @@ a:focus {
 
 #ig1,
 #ig2,
-#ig3 {
+#message {
   border: 2px solid #03045e !important;
 }
 

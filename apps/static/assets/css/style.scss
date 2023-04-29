@@ -217,12 +217,6 @@ a:focus {
     width: 70px;
   }
 
-  // span {
-  //   text-transform: uppercase;
-  //   font-weight: bold;
-  //   color: #060606;
-  //   font-size: 24px;
-  // }
 }
 
 .custom_nav-container {
@@ -470,11 +464,6 @@ a:focus {
   }
 }
 
-// end slider section
-
-
-
-// about section
 .about_section {
   .row {
     align-items: center;
@@ -500,9 +489,6 @@ a:focus {
   }
 }
 
-// end about section
-
-// trending section
 
 .trending_section {
   background-color: #f4f5f7;
@@ -568,9 +554,7 @@ a:focus {
 
 }
 
-// end trending section
 
-// discount section
 
 .discount_section {
   .row {
@@ -608,9 +592,7 @@ a:focus {
   }
 }
 
-// end discount section
 
-// brand section
 
 .brand_section {
   .brand_container {
@@ -671,9 +653,7 @@ a:focus {
   }
 }
 
-// end brand section
 
-// contact section
 .contact_section {
   position: relative;
 
@@ -810,10 +790,8 @@ a:focus {
 
 }
 
-// end client_section
 
 
-// info section
 .info_section {
   background-color: #0f1521;
   color: $white;
@@ -913,12 +891,6 @@ a:focus {
 
 
 
-
-// end info section
-
-
-/* footer section*/
-
 .footer_section {
   display: flex;
   flex-direction: column;
@@ -939,9 +911,7 @@ a:focus {
   color: #171717;
 }
 
-/* end footer section*/
 
-// navbar slide toggle style
 
 #navbarSupportedContent {
   transform: translateX(100vw);
@@ -990,4 +960,3 @@ a:focus {
   transform: rotate(-45deg) translate(7px, -10px);
 }
 
-// end navbar slide toggle style

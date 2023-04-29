@@ -41,6 +41,7 @@
 
  
   <div class="section py-0" id="card-help">
+    <br>
     <div class="container mt-n10">
       <div class="row">
         <div class="col-12">
@@ -49,7 +50,7 @@
               <div class="card h-100" id="card1"  >
                 <img
                   src="static/assets/img/blog/pexels-tara-winstead-8385972.jpg"
-                  class="card-img-top"
+                  class="card-img-top" id="card-image-1"
                   alt="..."
               
                 />
@@ -78,7 +79,7 @@
               <div class="card h-100" id="card2">
                 <img
                   src="static/assets/img/blog/D1.jpeg.jpg"
-                  class="card-img-top"
+                  class="card-img-top" id="card-image-2"
                   alt="..."
                 />
                 <div class="card-body">
@@ -104,7 +105,7 @@
               <div class="card h-100" id="card3">
                 <img
                   src="static/assets/img/blog/speech-therapy-centre-cochin-prayatna-learning-disability.jpg"
-                  class="card-img-top"
+                  class="card-img-top" id="card-image-3"
                   alt="..."
                 />
                 <div class="card-body">
@@ -132,6 +133,7 @@
         </div>
       </div>
     </div>
+    <br>
   </div>
 
 
@@ -186,7 +188,7 @@
                   </div>
                 </div>
               
-                <div class="mb-4" id="ig3">
+                <div class="mb-4">
                   <label for="message" style="font-family: 'Playfair Display', serif;
                   font-size: 24px;">Your Message</label>
                   <textarea
@@ -200,7 +202,7 @@
                 </div>
 
                 <div class="d-grid" >
-                  <button type="submit" class="btn rounded btn-secondary" id="sub-btn">
+                  <button type="submit" class="btn rounded btn-secondary" id="sub-btn" onclick="sub()">
                     Send message
                   </button>
                 </div>
@@ -382,5 +384,16 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+
+
+    function sub(){
+      alert('Response Recorded');
+      let output = document.getElementById('name')
+      output.value = "";
+      let output1 = document.getElementById('email')
+      output1.value = "";
+      let output2 = document.getElementById('message')
+      output2.value = "";
+    }
 </script>
 {% endblock javascripts %}
